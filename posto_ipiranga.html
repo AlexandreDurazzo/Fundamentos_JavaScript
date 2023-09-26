@@ -60,7 +60,7 @@
     <nav>
         <!-- Logo -->
         <img src="https://portal.ipiranga/imagens/meta-tag-ipiranga.png" alt="Gas Station Logo">
-        
+        <a href="./pagina_inicial.html">&lAarr; voltar</a>
         <!-- Navigation Links -->
     </nav>
     
@@ -71,10 +71,39 @@
         <!-- Rest of your gas station content goes here -->
     </div>
     <div class="Calculo">
-        <input type="number">Valor do compustível <p></p>
-        <input type="number">Quantidade de litros <p></p>
-        <button type="button">Calcular valor</button>
+        <input type="number"id="combustivel">Valor do compustível <p></p>
+        <input type="number"id="litros">Quantidade de litros <p></p>
+        <button type="button" onclick=calcular_valor()>Calcular valor</button>
 
     </div>
+    <div class="produtos">
+        <input type="text" id="lanche">lanche <p></p>
+        <input type="number" id="valor_lanche">valor do lanche <p></p>
+        <input type="text" id="refri">refri <p></p>
+        <input type="number" id="valor_refri">valor do refri <p></p>
+        
+        <button type="button" onclick=calcular_lanche()>Calcular lanche</button>
+
+
 </body>
+<script>
+    function calcular_valor(){
+        var combustivel =document.getElementById("combustivel").value
+        var litros =document.getElementById("litros").value
+        var resposta = combustivel * litros
+        alert("funciona!\n\no combustivel fica R$" + resposta)
+      }
+/*function    calcular_lanche(){
+        var valor_lanche =document.getElementById("valor_lanche").value
+        var valor_refri =document.getElementById("valor_refri").value
+        var conta = parseFloat(valor_refri)+ parseFloat(valor_refri)
+        alert("funciona!\n\na conta fica R$" + conta)
+      }*/
+      function calcular_lanche(){
+        var valor_lanche = document.getElementById("valor_lanche").value
+        var valor_refri = document.getElementById("valor_refri").value
+        const conta = parseInt(valor_lanche)+ parseInt(valor_refri)
+        alert("Funciona" + conta)
+      }
+</script>
 </html>
