@@ -60,6 +60,7 @@
     <nav>
         <!-- Logo -->
         <img src="https://portal.ipiranga/imagens/meta-tag-ipiranga.png" alt="Gas Station Logo">
+        <button><a href="./pagina_inicial.html">Voltar</a></button>
         
         <!-- Navigation Links -->
     </nav>
@@ -71,10 +72,33 @@
         <!-- Rest of your gas station content goes here -->
     </div>
     <div class="Calculo">
-        <input type="number">Valor do compustível <p></p>
-        <input type="number">Quantidade de litros <p></p>
-        <button type="button">Calcular valor</button>
-
+        <input type="number" id="combustivel">Valor do compustível <p></p>
+        <input type="number" id="litros">Quantidade de litros <p></p>
+        <button type="button" onclick=calcular_valor()>Calcular valor</button><p></p>
     </div>
+    <div class="Produtos">
+        <input type="text" id="lanche">Lanche <p></p>
+        <input type="number" id="valor_lanche">Valor do lanche <p></p>
+        <input type="text" id="refri">Refri <p></p>
+        <input type="number" id="valor_refri">Valor do refri <p></p>
+
+        <button type="button" onclick=calcular_lanche()>Calcular lanche</button>
+    </div>
+
 </body>
+<script>
+    function calcular_valor() {
+        var combustivel = document.getElementById("combustivel").value
+        var litros = document.getElementById("litros").value
+        var resposta = combustivel * litros
+       alert("Funciona!\n\nO combustivel fica R$" + resposta)
+    }
+    function calcular_lanche(){
+        var valor_lanche = document.getElementById("valor_lanche").value
+        var valor_refri = document.getElementById("valor_refri").value
+        var conta = parseInt(valor_lanche)+parseInt(valor_refri)
+        
+        alert("A conta do posto Ipiranga ficou R$"+ conta)
+    }
+</script>
 </html>
