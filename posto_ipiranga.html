@@ -74,6 +74,7 @@
         <input type="number"id="combustivel">Valor do compustível <p></p>
         <input type="number"id="litros">Quantidade de litros <p></p>
         <button type="button" onclick=calcular_valor()>Calcular valor</button>
+        <p></p>
 
     </div>
     <div class="produtos">
@@ -102,8 +103,8 @@
       function calcular_lanche(){
         var valor_lanche = document.getElementById("valor_lanche").value
         var valor_refri = document.getElementById("valor_refri").value
-        const conta = parseInt(valor_lanche)+ parseInt(valor_refri)
-        alert("Funciona" + conta)
+        var conta = parseInt(valor_lanche)+ parseInt(valor_refri)
+        alert("Funciona\n\n" + conta)
       }
 </script>
 </html>

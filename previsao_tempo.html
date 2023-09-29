@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <style>
+        /* Add some basic styles for the gas station webpage */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 10px;
+        }
+
+        nav img {
+            height: 40px; /* Adjust the height as needed */
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Logo -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXGHc-zCteMT9lbCO_rIaSPMwD54ktMzPfIA&usqp=CAU">
+        <a href="./pagina_inicial.html">&lAarr; voltar</a>
+        <!-- Navigation Links -->
+    </nav>
+    
+    <div class="container">
+        <h1>Bem vindo ao previsão do tempo</h1>
+        <p>Aqui tem de Tuuuuudo!</p>
+        
+        <!-- Rest of your gas station content goes here -->
+    </div>
+        <input type="text" id="cidade">Cidade
+        <p></p>
+        <input type="number" id="maxima">Máxima <input type="number" id="variacao_maxima">Variação
+        <p></p>
+        <input type="number" id="minima">Mínima <input type="number" id="variacao_minima">Variação  
+        <p></p>
+        
+        <button type="button" onclick=exibir_previsao()>Exibir previsão</button>
+
+
+</body>
+<script>
+    function exibir_previsao(){
+        var variacao_maxima = document.getElementById("variacao_maxima").value
+        var variacao_minima = document.getElementById("variacao_minima").value
+        var cidade = document.getElementById("cidade").value
+        var maxima = document.getElementById("maxima").value
+        var minima = document.getElementById("minima").value
+        
+        maxima = parseInt(maxima)+parseInt(variacao_maxima)
+        minima = minima-variacao_minima
+        var media = maxima/minima
+        alert("Previsão para: "+cidade+"\nMáxima de: "+maxima+"\nMínima de: "+minima+"\nMédia: "+media)
+    }
+</script>
+</html>
