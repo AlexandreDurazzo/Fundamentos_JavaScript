@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de votação</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+</head>
+<body>
+    <div class="intro">
+        <h1>Sistema de Votação</h1>
+    </div>
+    <div class="content">
+
+        <img src="https://pyxis.nymag.com/v1/imgs/d6a/dc7/4a5001b7beea096457f480c8808572428b-09-roll-safe.2x.h473.w710.jpg" class="smart">
+        <div class="container">
+            <h1>Vote Consciente</h1>
+            <ul id="options-list">
+                <li>
+                <span>Biscoito:</span>
+                <button onclick="voto(1)">Vote</button>
+                <span id="voto-1">0</span>
+            </li>
+            <li>
+                <span>Bolacha:</span>
+                <button onclick="voto(2)">Vote</button>
+                <span id="voto-2">0</span>
+            </li>
+            <!-- Add more options as needed -->
+        </ul>
+    </div>
+</div>
+    <script>
+        const voto = (opcao) => {
+    const Elemento_votos = document.getElementById(`voto-${opcao}`);
+    const votos_atuais = parseInt(Elemento_votos.innerText, 10);
+    Elemento_votos.innerText = votos_atuais + 1;
+        };
+    </script>
+</body>
+</html>
