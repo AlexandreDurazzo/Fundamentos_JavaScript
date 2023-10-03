@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votação de filmes</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+</head>
+<body>
+    <div class="intro">
+        <h1>Sistema de Votação</h1>
+    </div>
+    <div class="content">
+
+    
+        <div class="container">
+            <h1>Vote Consciente</h1>
+            <ul id="options-list">
+                <li>
+                    <img class capa src="https://image.tmdb.org/t/p/original/v5NNSikH5w7Bz8SDcqxLEwVD4wW.jpg">
+                <span>Ghost in the shell 1995:</span>
+                <button onclick="voto(1)">Vote</button>
+                <span id="voto-1">0</span>
+            </li>
+            <li>
+                <img class capa src="https://images5.alphacoders.com/129/1299343.jpg>
+                
+                <span>Berserk 1997</span>
+                <button onclick="voto(2)">Vote</button>
+                <span id="voto-2">0</span>
+            </li>
+            <!-- Add more options as needed -->
+            <li>
+                <img class capa src="https://skdesu.com/wp-content/uploads/2023/07/steinsgate-0.jpg">
+            <span>Steins Gate:</span>
+            <button onclick="voto(3)">Vote</button>
+            <span id="voto-1">0</span>
+        </li>
+        <li>
+            <img class capa src="https://skdesu.com/wp-content/uploads/2023/07/steinsgate-0.jpg">
+        <span>ErgoProxy</span>
+        <button onclick="voto(4)">Vote</button>
+        <span id="voto-1">0</span>
+    </li>
+        </ul>
+        <li>
+            <img class capa src="https://img.quizur.com/f/img600321a2b243d0.54518080.jpg?lastEdited=1610818132">
+        <span>Pscho Pass</span>
+        <button onclick="voto(5)">Vote</button>
+        <span id="voto-1">0</span>
+    </li>
+    </div>
+</div>
+    <script>
+        const voto = (opcao) => {
+    const Elemento_votos = document.getElementById(`voto-${opcao}`);
+    const votos_atuais = parseInt(Elemento_votos.innerText, 10);
+    Elemento_votos.innerText = votos_atuais + 1;
+        };
+    </script>
+</body>
+</html>
