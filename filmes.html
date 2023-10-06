@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de filmes</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Votação de filmes</h1>
+
+    </div>
+    <div class="content">
+        <div class="filme">
+            <li>
+                <div class="container">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQj4FI9XBRgu-r3iTDIYgxYSbpCls2LdLHNzBJvpMncDgq-hqoBcLq8SCGWO2P8BpfokM&usqp=CAU"
+                        class="smart">
+                    <h1>American Horror Story</h1>
+                    <ul id="options-list">
+                        <li>
+                            <span>Voto:</span>
+                            <button onclick="voto(1)">Vote</button>
+                            <span id="voto-1">0</span>
+                        </li>
+                        <!-- Add more options as needed -->
+                    </ul>
+            </li>
+            </div>
+    </div>
+        </div> <!-- fim da div filmes-->
+        <div>
+            <div class="content">
+                <div class="filme">
+                    <li>
+                        <div class="container">
+                            <img src="https://m.media-amazon.com/images/I/618-W+ccomL.jpg"
+                            class="smart">
+                            <h1>Prision Break</h1>
+                            <ul id="options-list">
+                                <li>
+                                    <span>Voto:</span>
+                                    <button onclick="voto(2)">Vote</button>
+                                    <span id="voto-2">0</span>
+                                </li>
+                                <!-- Add more options as needed -->
+                            </ul>
+                    </li>
+                    </div>
+            </div>
+                </div>
+                <div>
+                    <div class="content">
+                        <div class="filme">
+                            <li>
+                                <div class="container">
+                                    <img src="https://bancodeseries.com.br/images/posters/13695.jpg"
+                                    class="smart">
+                                    <h1>Vis a Vis</h1>
+                                    <ul id="options-list">
+                                        <li>
+                                            <span>Voto:</span>
+                                            <button onclick="voto(3)">Vote</button>
+                                            <span id="voto-3">0</span>
+                                        </li>
+                                        <!-- Add more options as needed -->
+                                    </ul>
+                            </li>
+                            </div>
+                    </div>
+                        </div>
+                        
+    <script>
+        const voto = (opcao) => {
+            const Elemento_votos = document.getElementById(`voto-${opcao}`);
+            const votos_atuais = parseInt(Elemento_votos.innerText, 10);
+            Elemento_votos.innerText = votos_atuais + 1;
+            if(votos_atuais >4){
+                alert("filme vencedor")
+            }
+        };
+
+    </script>
+</body>
+
+</html>
