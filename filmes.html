@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Filmes</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Votação de Séries</h1>
+    </div>
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_FMjpg_UX1000_.jpg" class="smart">
+                    <h1>Band of brothers</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(1)">Vote</button>
+                            <span id="voto-1">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://resizing.flixster.com/zhPYdxVDydROcEPqja0dRu2cW7k=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvNDNjZjMyMDQtNzZiYi00MmM2LTlhZDktZjUyMDdiNTE5NjI5LmpwZw==" class="smart">
+                    <h1>Kobra Kai</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(2)">Vote</button>
+                            <span id="voto-2">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/9/92/PosterChernobyl.jpg" class="smart">
+                    <h1>Chernobyl</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(3)">Vote</button>
+                            <span id="voto-3">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Servant_of_the_People_TV.jpg" class="smart">
+                    <h1>Servidor do povo</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(4)">Vote</button>
+                            <span id="voto-4">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://br.web.img2.acsta.net/c_310_420/pictures/19/12/04/22/35/3436063.jpg" class="smart">
+                    <h1>Vikings</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(5)">Vote</button>
+                            <span id="voto-5">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    <div class="filme"> <!--Classe Filmes-->
+        <div class="content">
+            <li>
+                <div class="container">
+                    <img src="https://br.web.img2.acsta.net/pictures/14/03/28/10/18/433386.jpg" class="smart">
+                    <h1>Suits</h1>
+                    <ul id="options-list">
+                        <li>
+                            <button onclick="voto(6)">Vote</button>
+                            <span id="voto-6">0</span>
+                        </li>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </div> <!--Fim da Classe Filmes-->
+    
+    </div>
+    <script>
+        const voto = (opcao) => {
+            const Elemento_votos = document.getElementById(`voto-${opcao}`);
+            const votos_atuais = parseInt(Elemento_votos.innerText, 10);
+            Elemento_votos.innerText = votos_atuais + 1;
+            if(votos_atuais > 4){
+                alert("Filme vencedor!!")
+            }
+        };
+
+    </script>
+</body>
+
+</html>
