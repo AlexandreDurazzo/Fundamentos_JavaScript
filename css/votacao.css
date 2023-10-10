@@ -45,10 +45,14 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-.smart{
+.imagem{
     height: 140px;
 }
 .intro{
     background-color: #007BFF;
     border-radius: 40px;
-}   
+}
+.filme{
+    display: flex;
+    flex-direction: row;
+}

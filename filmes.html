@@ -16,8 +16,8 @@
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://m.media-amazon.com/images/M/MV5BMTI3ODc2ODc0M15BMl5BanBnXkFtZTYwMjgzNjc3._V1_FMjpg_UX1000_.jpg" class="smart">
-                    <h1>Band of brothers</h1>
+                    <img src=`{capa(1)} class="imagem" id="img1">
+                    <h1 id="titulo1"><script>titulo(1)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(1)">Vote</button>
@@ -27,13 +27,12 @@
             </li>
             </ul>
         </div>
-    </div> <!--Fim da Classe Filmes-->
-    <div class="filme"> <!--Classe Filmes-->
+
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://resizing.flixster.com/zhPYdxVDydROcEPqja0dRu2cW7k=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvNDNjZjMyMDQtNzZiYi00MmM2LTlhZDktZjUyMDdiNTE5NjI5LmpwZw==" class="smart">
-                    <h1>Kobra Kai</h1>
+                    <img src=`{capa(2)}`class="imagem" id="img2">
+                    <h1 id="titulo2"><script>titulo(2)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(2)">Vote</button>
@@ -43,13 +42,12 @@
             </li>
             </ul>
         </div>
-    </div> <!--Fim da Classe Filmes-->
-    <div class="filme"> <!--Classe Filmes-->
+
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/9/92/PosterChernobyl.jpg" class="smart">
-                    <h1>Chernobyl</h1>
+                    <img src=`capa(3) class="imagem" id="img3">
+                    <h1 id="titulo3"> <script>titulo(3)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(3)">Vote</button>
@@ -59,13 +57,12 @@
             </li>
             </ul>
         </div>
-    </div> <!--Fim da Classe Filmes-->
-    <div class="filme"> <!--Classe Filmes-->
+
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/7/77/Servant_of_the_People_TV.jpg" class="smart">
-                    <h1>Servidor do povo</h1>
+                    <img src=`capa(4) class="imagem" id="img4">
+                    <h1 id="titulo4"><script>titulo(4)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(4)">Vote</button>
@@ -75,13 +72,12 @@
             </li>
             </ul>
         </div>
-    </div> <!--Fim da Classe Filmes-->
-    <div class="filme"> <!--Classe Filmes-->
+
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://br.web.img2.acsta.net/c_310_420/pictures/19/12/04/22/35/3436063.jpg" class="smart">
-                    <h1>Vikings</h1>
+                    <img src=`capa(5) class="imagem" id="img5">
+                    <h1 id="titulo5"><script>titulo(5)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(5)">Vote</button>
@@ -91,13 +87,12 @@
             </li>
             </ul>
         </div>
-    </div> <!--Fim da Classe Filmes-->
-    <div class="filme"> <!--Classe Filmes-->
+
         <div class="content">
             <li>
                 <div class="container">
-                    <img src="https://br.web.img2.acsta.net/pictures/14/03/28/10/18/433386.jpg" class="smart">
-                    <h1>Suits</h1>
+                    <img src=`capa(6) class="imagem" id="img6">
+                    <h1 id="titulo6"><script>titulo(6)</script></h1>
                     <ul id="options-list">
                         <li>
                             <button onclick="voto(6)">Vote</button>
@@ -108,15 +103,27 @@
             </ul>
         </div>
     </div> <!--Fim da Classe Filmes-->
-    
+
     </div>
     <script>
+
+        import serie from "./series.json"
+        //Uso de Json para series
+        const titulo = (numero) => {
+            const titulo = document.getElementById(`titulo${numero}`)
+            
+        }
+        const capa = (numero) => {
+            const imagem = document.getElementById(`img${numero}`)
+        }
+
+        //Contagem de votos
         const voto = (opcao) => {
             const Elemento_votos = document.getElementById(`voto-${opcao}`);
             const votos_atuais = parseInt(Elemento_votos.innerText, 10);
             Elemento_votos.innerText = votos_atuais + 1;
-            if(votos_atuais > 4){
-                alert("Filme vencedor!!")
+            if (votos_atuais > 4) {
+                alert("Serie vencedora!!" + serie.titulo[0])
             }
         };
 
